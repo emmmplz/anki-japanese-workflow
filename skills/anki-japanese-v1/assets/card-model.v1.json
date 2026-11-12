@@ -1,0 +1,19 @@
+{
+  "name": "日语日中词卡 · v1.0",
+  "fields": [
+    "ID",
+    "日语单词",
+    "假名",
+    "声调",
+    "词性",
+    "中文释义",
+    "用例",
+    "课次",
+    "校对提示",
+    "正面单词",
+    "正面用例"
+  ],
+  "qfmt": "<main class=\"CardSide\"><div class=\"Top\">{{课次}}</div><h1 class=\"VocabKanji\" lang=\"ja\">{{正面单词}}</h1><ul class=\"SentenceList\">{{正面用例}}</ul></main>",
+  "afmt": "<main class=\"CardSide\"><div class=\"Top\">{{课次}}</div><h1 class=\"VocabKanji\" lang=\"ja\">{{日语单词}}</h1><div class=\"VocabFurigana\" lang=\"ja\">{{假名}}</div><div class=\"VocabPoS\"><span class=\"PosLabel\">{{词性}}</span><span class=\"VocabDef\">{{中文释义}}</span></div><p class=\"CheckNote\">{{校对提示}}</p><ul class=\"SentenceList\">{{用例}}</ul></main>",
+  "css": ":root{--text-lg:20px;--ink:#243734;--paper:#fbfcf8;--muted:#637571;--accent:#b45428}\n*{box-sizing:border-box}\n.card{margin:0;padding:20px;background:var(--paper);color:var(--ink);font:var(--text-lg)/1.7 system-ui,\"Microsoft YaHei\",sans-serif;text-align:left}\n.nightMode{--ink:#e1e9e3;--paper:#202b28;--muted:#b7c9bf;--accent:#f5b58c}\n.CardSide{max-width:760px;margin:auto;overflow-wrap:anywhere}\n.Top,.CheckNote{color:var(--muted);font-size:14px}\n.VocabKanji{font-size:36px;text-align:center;margin:18px 0}\n.VocabFurigana{text-align:center;margin:22px 0;font-size:26px}\n.VocabPoS{font:inherit}.PosLabel,.VocabDef{font:inherit}.PosLabel{margin-right:.5em}\n.SentenceList{list-style:none;margin:20px 0;padding:0}\n.Sentence{padding:16px 0;border-top:1px solid var(--muted)}\n.SentKanji{font:inherit;margin:0}.SentDef{font:inherit;color:var(--muted);margin:8px 0}\nem{font-style:normal;margin-right:.5em}\n.PitchReading{display:inline-flex;white-space:nowrap;margin:.3em .5em;line-height:1.4}\n.PitchReading small{font-size:.6em;margin-left:.4em;color:var(--accent)}\n.PitchMora{position:relative;display:inline-block}\n.PitchMora:before{content:\"\";position:absolute;left:0;right:0;border-top:2px solid var(--accent)}\n.PitchHigh:before{top:-.25em}.PitchLow:before{top:0}\n.PitchChange:after{content:\"\";position:absolute;left:0;top:-.25em;height:.25em;border-left:2px solid var(--accent)}\n.PitchTail:before{border-right:2px solid var(--accent);height:.25em}\n@media(max-width:480px){.card{padding:12px}.VocabKanji{font-size:30px}.VocabFurigana{font-size:23px}}"
+}

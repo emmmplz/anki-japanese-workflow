@@ -1,0 +1,101 @@
+[
+  {
+    "guid": "demo-neko-001",
+    "word": "猫",
+    "kana": "ねこ",
+    "accents": [
+      1
+    ],
+    "pos": [
+      "名词"
+    ],
+    "meanings": [
+      "猫"
+    ],
+    "examples": [
+      {
+        "ja": "猫が窓のそばで寝ています。",
+        "zh": "猫正在窗边睡觉。"
+      },
+      {
+        "ja": "この猫は魚が好きです。",
+        "zh": "这只猫喜欢吃鱼。"
+      }
+    ],
+    "warnings": [
+      "音调为教学示例，未在本次发布中另行词典核验"
+    ],
+    "location": "演示",
+    "tags": [
+      "workflow-demo"
+    ],
+    "needs_enrichment": []
+  },
+  {
+    "guid": "demo-aruku-002",
+    "word": "歩く",
+    "kana": "あるく",
+    "accents": [
+      2
+    ],
+    "pos": [
+      "五段自动词"
+    ],
+    "meanings": [
+      "走；步行"
+    ],
+    "examples": [
+      {
+        "ja": "毎朝、公園を歩きます。",
+        "zh": "我每天早上在公园散步。"
+      },
+      {
+        "ja": "駅まで一緒に歩きましょう。",
+        "zh": "我们一起走到车站吧。"
+      }
+    ],
+    "warnings": [
+      "音调为教学示例，未在本次发布中另行词典核验"
+    ],
+    "location": "演示",
+    "tags": [
+      "workflow-demo"
+    ],
+    "needs_enrichment": []
+  },
+  {
+    "guid": "demo-usb-003",
+    "word": "USB",
+    "kana": "ゆーえすびー",
+    "accents": [],
+    "pos": [
+      "名词"
+    ],
+    "meanings": [
+      "通用串行总线；USB 接口"
+    ],
+    "tts_word_text": "ゆーえすびー",
+    "warnings": [
+      "缩写的整词音调待核对"
+    ],
+    "examples": [
+      {
+        "ja": "USBケーブルを接続してください。",
+        "zh": "请连接 USB 线。",
+        "tts_text": "ゆーえすびーケーブルを接続してください。"
+      },
+      {
+        "ja": "このパソコンにはUSBポートが二つあります。",
+        "zh": "这台电脑有两个 USB 接口。",
+        "tts_text": "このパソコンにはゆーえすびーポートが二つあります。"
+      }
+    ],
+    "location": "演示",
+    "tags": [
+      "workflow-demo"
+    ],
+    "needs_enrichment": [
+      "pitch"
+    ]
+  }
+]

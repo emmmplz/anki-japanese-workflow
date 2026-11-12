@@ -1,0 +1,20 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  source-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r skills/anki-japanese-v1/scripts/requirements.txt -r tts-service/requirements.txt
+      - run: python -B -m unittest discover -s tests -v
+      - run: python -B -m unittest discover -s tests -v
+        working-directory: tts-service
+      - run: node tests/test_web.cjs
+        working-directory: tts-service
+      - run: python -B tools/check_release.py

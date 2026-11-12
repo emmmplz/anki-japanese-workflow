@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anki 日语词卡 v1.0"
+  short_description: "将日语单词表制作成含音调、中文例句译文和双音色音频的词卡"
+  default_prompt: "使用 $anki-japanese-v1，整理这份单词表并按我的外部音频配置制作 Anki 词包。"

@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "seed": 20261102,
+  "speed": 1.0,
+  "normalization": {
+    "active_rms_dbfs": -22,
+    "peak_limit": 0.94,
+    "max_gain": 6.0
+  },
+  "runtime": {
+    "module_root": "skills/anki-japanese-v1/scripts/runtime"
+  },
+  "profiles": {
+    "word": {
+      "name": "V5 标准版＋自备参考音色",
+      "backend": {
+        "factory": "tts_service.backends.gpt_sovits:GPTSoVITSBackend",
+        "options": {
+          "repo_root": "external/GPT-SoVITS-v5",
+          "device": "xpu",
+          "is_half": false,
+          "threads": 6,
+          "version": "v5dev",
+          "sample_steps": 32,
+          "cfg_rate": 1.3,
+          "text_split_method": "cut0",
+          "max_segment_chars": 150,
+          "t2s_weights_path": "GPT_SoVITS/pretrained_models/s1v3.ckpt",
+          "vits_weights_path": "GPT_SoVITS/pretrained_models/gsv-v5-pretrained/s2Gv5dev.pth",
+          "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+          "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base"
+        }
+      },
+      "voices": [
+        {
+          "id": "default",
+          "name": "自备日语参考音色",
+          "language": "ja",
+          "options": {
+            "reference_audio": "external/voices/word-reference.wav",
+            "reference_language": "ja",
+            "reference_text": "こんにちは。今日はよい天気ですね。"
+          }
+        }
+      ],
+      "warmup_text": "こんにちは。",
+      "sample_rate": 48000,
+      "endpoint": "http://127.0.0.1:17862",
+      "server_config": "tts-service/config.word.local.json"
+    },
+    "sentence": {
+      "name": "V2ProPlus＋自备参考音色",
+      "backend": {
+        "factory": "tts_service.backends.gpt_sovits:GPTSoVITSBackend",
+        "options": {
+          "repo_root": "external/GPT-SoVITS-v2Pro",
+          "device": "xpu",
+          "is_half": false,
+          "threads": 6,
+          "version": "v2ProPlus",
+          "text_split_method": "cut0",
+          "max_segment_chars": 150,
+          "t2s_weights_path": "local-models/sentence.ckpt",
+          "vits_weights_path": "local-models/sentence.pth",
+          "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+          "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
+          "model_name": "User configured V2ProPlus"
+        }
+      },
+      "voices": [
+        {
+          "id": "default",
+          "name": "自备日语参考音色",
+          "language": "ja",
+          "options": {
+            "reference_audio": "external/voices/sentence-reference.wav",
+            "reference_language": "ja",
+            "reference_text": "こんにちは。今日はよい天気ですね。"
+          }
+        }
+      ],
+      "warmup_text": "こんにちは。",
+      "sample_rate": 32000,
+      "endpoint": "http://127.0.0.1:17863",
+      "server_config": "tts-service/config.sentence.local.json"
+    }
+  }
+}
